@@ -1,0 +1,251 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
+
+
+*, *::before, *::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --Gradient: hsl(6, 100%, 80%) to hsl(335, 100%, 65%);
+    --Blue200: hsl(243, 100%, 93%);
+    --GrayishBlue: hsl(229, 7%, 55%);
+    --Blue850: hsl(228, 56%, 26%);
+    --Blue950: hsl(229, 57%, 11%);
+    --White: hsl(0, 0%, 100%); 
+}
+
+body {
+    background: var(--Blue950);
+    font-family: 'Raleway', sans-serif;
+    font-size: 1em;
+    font-weight: 400;
+    color: var(--White);
+    background-image: url(images/bg-desktop.png);
+    background-size: auto;
+    background-repeat: no-repeat;
+    background-position: calc(20% + 0em) calc(20% + 19em);
+}
+
+img {
+    display: block;
+    max-width: 100%;
+}
+
+.flex {
+    display: flex;
+    align-items: center;
+}
+
+.wrapper {
+    display: grid;
+    align-content: center;
+    justify-content: center;
+    min-height: 90dvh;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: 1fr 33.3em;
+    gap: 2em;
+}
+
+.fylo-docs {
+    border-radius: .75em;
+    border-top-right-radius: 5.5em;
+    padding: 2.5em;
+    width: 21.5em;
+    height: 12em;
+    background-color: var(--Blue850);
+}
+
+.docs-icons {
+    margin-top: 1.85em;
+    gap: .85em;
+}
+
+.icon-document, .icon-folder, .icon-upload {
+    background: var(--Blue950);
+    border-radius: .70em;
+}
+
+.icon-document {
+    padding: .70em .95em;
+}
+
+.icon-folder {
+    padding: .80em;
+}
+
+.icon-upload {
+    padding: .93em .75em;
+}
+
+.storage {
+    margin-top: 2.5em;
+    padding: 2.5em;
+    border-radius: .75em;
+    height: 9.5em;
+    background-color: var(--Blue850);
+}
+
+.tooltip {
+    width: 177px;
+    height: 77px;
+    border: 1px solid hsl(229, 57%, 11%);
+    border-radius: 10px;
+    background-color: white;
+    position: relative;
+    top: -80px;
+    left: 278px;
+    padding: 1em 1.5em;
+}
+
+.tooltip-two {
+    width: 0;
+    height: 0;
+    border-left: 40px solid transparent;
+    border-right: 0px solid transparent;
+    border-top: 50px solid white;
+    position: relative;
+    top: -105px;
+    left: 414px;
+}
+
+.gb-left {
+    color: var(--GrayishBlue);
+    font-size: .80em;
+    font-weight: 700;
+    position: relative;
+    top: -2.5em;
+    left: 5.8em;
+}
+
+.gb-num {
+    color: var(--Blue950);
+    font-size: 2.5em;
+    font-weight: 700;
+    position: relative;
+    top: -.10em;
+}
+
+small {
+    color: var(--Blue200);
+    font-size: .90em;
+    position: absolute;
+    top: 24em;
+}
+
+.bar {
+    box-sizing: content-box;
+    height: 10px; /* Can be anything */
+    position: relative;
+    top: -5.5em;
+    background: var(--Blue950);
+    border-radius: 25px;
+    padding: 5px;
+  }
+
+  .bar > span {
+    display: block;
+    height: 145%;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+    position: relative;
+    top: -.15em;
+    overflow: hidden;
+  }
+
+.orange > span {
+    background-image: linear-gradient(to right, rgba(255, 163, 153, 1), rgba(255, 77, 151, 1));
+  }
+
+.dot {
+    width: 11px;
+    height: 11px;
+    background-color: white;
+    border-radius: 50%;
+    position: relative;
+    top: -1em;
+    left: 19.90em;
+}
+
+.gigabyte { 
+    position: relative;
+    bottom: 27.5em;
+    font-size: .85em;
+    font-weight: 700;
+}
+
+.giga-1 {
+    position: relative;
+    /* left: 1em; */
+}
+
+.giga-2 {
+    position: relative;
+    left: 30.7em;
+}
+
+.attribution {
+    text-align: center;
+}
+
+@media screen and (max-width: 920px) {
+    .container {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .gb-used{
+        position: relative;
+        top: -9em;
+        left: 1em;
+    }
+
+    small {
+        position: absolute;
+        top: 31em;
+        left: 19em;
+    }
+
+    .bar {
+        top: -7.3em;
+    }
+
+    .dot {
+        left: 11.1em;
+    }
+
+    .gigabyte {
+        bottom: 36em;
+        right: 17em;
+    }
+
+    .giga-2 {
+        left: 34.3em;
+    }
+
+    .tooltip {
+        top: 5em;
+        left: 3.5em;
+    }
+
+    .tooltip-two {
+        visibility: hidden;
+    }
+}
+
+@media screen and (max-width: 520px) {
+    body {
+        background-image: url(images/bg-mobile.png);
+        background-size: 100%;
+        background-repeat: initial;
+        background-position: calc(100% - 0px) calc(150% - 10px); 
+        /* background-position: calc(100% + 0em) calc(150% + 19em); */
+
+    }
+}
