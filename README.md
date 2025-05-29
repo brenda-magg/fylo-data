@@ -24,7 +24,7 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Fylo data](https://your-solution-url.com)
+- Solution URL: [Fylo data](https://brenda-magg.github.io/fylo-data/)
 
 ## My process
 
